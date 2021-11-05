@@ -289,9 +289,9 @@ The priority level of selectors
 - Example 1:
 <img src="https://github.com/MichaelPhamNgo/Review-CSS/blob/main/toast%20message.png" alt="Toast Message" height=350/>
 
-> Block: Toast
-> Elements: Icon, Title, Message, Close
-> Modifier: Success, Info, Warning
+> Block: Toast <br/>
+> Elements: Icon, Title, Message, Close Button <br/>
+> Modifier: Success, Info, Warning  <br/>
 
 
 
