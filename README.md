@@ -288,40 +288,73 @@ The priority level of selectors
 
 - Example 1:
 <img src="https://github.com/MichaelPhamNgo/Review-CSS/blob/main/toast%20message.png" alt="Toast Message" height=350/>
-
 > 1. Block: Toast <br/>
 > 2. Elements: Icon, Content (Title, Message), Close <br/>
 > 3. Modifier: Success, Info, Warning  <br/>
 
 [Click to View](https://codepen.io/michaelphamngo/pen/XWaEreE)
 
+- Example 2:
+<img src="https://github.com/MichaelPhamNgo/Review-CSS/blob/main/bootstrap-buttons.png" alt="Bootstrap Buttons" height=350/>
+
+> 1. Block: btn <br/>
+> 2. Elements: No Elements<br/>
+> 3. Modifier: Primary, Success, Info, Warning, Danger, Bordered, Border-Radius-5, Border-Radius-40, Shadow  <br/>
+
+[Click to View](https://codepen.io/michaelphamngo/pen/WNEzNVY)
+
 ### CSS units
 
+The common css units using in a website
+
+| Unit |  Description                                                                                   |
+|------|------------------------------------------------------------------------------------------------|
+| px   | Pixels (px) are relative to the viewing device. 1px is one device pixel (dot) of the display.  |
+| em   | Relative to the font-size of the parent element which contains font-size                       |
+| rem  | Relative to font-size of the root element                                                      |
+| vw   | Relative to 1% of the width of the viewport*                                                   |
+| vh   | Relative to 1% of the height of the viewport*                                                  |
+| %    | Relative to the parent element                                                                 |  
+
 ### CSS functions
+
+The common css functions using in a website
+
+| Function          |  Description                                                          |   Examples    |
+|-------------------|-----------------------------------------------------------------------|---------------|
+| attr              | Returns the value of an attribute of the selected element             |               |
+| calc              | Allows you to perform calculations to determine CSS property values   |               |
+| counter           | Returns the current value of the named counter                        |               |
+| cubic-bezier      | Defines a Cubic Bezier curve                                          |               |
+| linear-gradient   | Relative to 1% of the height of the viewport*                         |               |
+| rgba              | Defines colors using the Red-Green-Blue-Alpha model (RGBA)            |               |
+| rgb               | Defines colors using the Red-Green-Blue model (RGB)                   |               |  
+| var               | Inserts the value of a custom property                                |               |  
+
 
 ### CSS font and text
 
 ### CSS padding, margin, and border
 
-### CSS Shadow
+### CSS shadow
 
-### CSS Pseudo Classes
+### CSS pseudo classes
 
-### CSS Pseudo Element
+### CSS pseudo element
 
 ### CSS list and table
 
-### CSS Background
+### CSS background
 
 ### CSS overflow and float
 
 ### CSS position and display
 
-### CSS Animation
+### CSS animation
 
-### CSS Flexbox
+### CSS flexbox
 
-### CSS Grid
+### CSS grid
 
 ### Components in Website
 #### Header
