@@ -12,7 +12,7 @@ selector {
 ### CSS Selectors
 
 | Selector          |   Example                 |  Description                                          |
----------------------------------------------------------------------------------------------------------
+|-------------------|---------------------------|-------------------------------------------------------|
 | #id               |   #theId                  | Selects the element with id = "theId"                 |
 | .class            |   .theClasses             | Selects all elements with class = "theClasses"        |
 | element.classes   |   p.theClasses            | Selects only p tags with class = "theClasses"         |
