@@ -289,11 +289,11 @@ The priority level of selectors
 - Example 1:
 <img src="https://github.com/MichaelPhamNgo/Review-CSS/blob/main/toast%20message.png" alt="Toast Message" height=350/>
 
-> - Block: Toast <br/>
-> - Elements: Icon, Title, Message, Close Button <br/>
-> - Modifier: Success, Info, Warning  <br/>
+> 1. Block: Toast <br/>
+> 2. Elements: Icon, Content (Title, Message), Close <br/>
+> 3. Modifier: Success, Info, Warning  <br/>
 
-
+[Click to View](https://codepen.io/michaelphamngo/pen/XWaEreE)
 
 ### CSS units
 
