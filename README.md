@@ -94,23 +94,16 @@ The priority level of selectors
     </body>
 </html>
 ```
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            * {
-                color : red
-            }
+<style>
+    * {
+        color : red
+    }
 
-            p {
-                color : red
-            }
-        </style>
-    </head>
-    <body>
-        <p>Examples for priority level of selectors</p>
-    </body>
-</html>
+    p {
+        color : red
+    }
+</style>
+<p>Examples for priority level of selectors</p>
 
 
 
