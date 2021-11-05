@@ -10,7 +10,7 @@ selector {
 
 
 ### CSS Selectors
----------------------------------------------------------------------------------------------------------
+
 | Selector          |   Example                 |  Description                                          |
 ---------------------------------------------------------------------------------------------------------
 | #id               |   #theId                  | Selects the element with id = "theId"                 |
@@ -19,7 +19,7 @@ selector {
 | *                 |   *                       | Selects all elements                                  |
 | element           |   p                       | Selects all p tags                                    |
 | element,element,..|   div,p                   | Selects all div tags and all p tags                   |  
----------------------------------------------------------------------------------------------------------
+
 
 ### CSS Declaration and Priority
 There are three ways of inserting a style sheet:
