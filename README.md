@@ -81,7 +81,7 @@ The priority level of selectors
     <head>
         <style>
             * {
-                color : red
+                color : violet
             }
 
             p {
@@ -90,20 +90,12 @@ The priority level of selectors
         </style>
     </head>
     <body>
+        <h3>This tag will not be colored<h3>
         <p>Examples for priority level of selectors</p>
     </body>
 </html>
 ```
-<style>
-    * {
-        color : red
-    }
-
-    p {
-        color : red
-    }
-</style>
-<p>Examples for priority level of selectors</p>
+[Click to View](https://codepen.io/michaelphamngo/pen/NWvyYzB)
 
 
 
