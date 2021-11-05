@@ -80,24 +80,201 @@ The priority level of selectors
 <html>
     <head>
         <style>
-            * {
-                color : violet
-            }
-
             p {
                 color : red
             }
+
+            * {
+                color : violet
+            }            
         </style>
     </head>
     <body>
-        <h3>This tag will not be colored<h3>
+        <h3>This tag will color violet<h3>
         <p>Examples for priority level of selectors</p>
     </body>
 </html>
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/NWvyYzB)
 
+- element vs attribute
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>       
+            [setColor] {
+                color : red;
+                font-size: 12px;
+            }
 
+            p {
+                color : orange;
+                font-size: 16px;
+            }            
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <p setColor>Examples for priority level of selectors</p>
+    </body>
+</html>
+```
+[Click to View](https://codepen.io/michaelphamngo/pen/vYJdRQZ)
+
+- attribute vs class
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>       
+            .myStyle {
+                color : violet;                
+            }                             
+
+            [setColor] {
+                color : red;
+                font-size: 12px;
+            }
+
+            p {
+                color : orange;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <p setColor class="myStyle">Examples for priority level of selectors</p>
+    </body>
+</html>
+```
+[Click to View](https://codepen.io/michaelphamngo/pen/dyzdmEW)
+
+- class vs id
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>                        
+            #myId {
+                border: 2px solid purple;
+            }            
+
+            .myStyle {
+                color : violet;                
+                font-weight: bold;
+                border: 1px dashed violet;        
+            }            
+
+            p {
+                color : orange;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <p class="myStyle" id="myId">Examples for priority level of selectors</p>
+    </body>
+</html>
+```
+[Click to View](https://codepen.io/michaelphamngo/pen/VwzQxZz)
+
+- id vs combine selectors
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>                        
+            #myId.myStyle {
+                color : violet;                
+                font-weight: bold;
+                border: 1px dashed violet;        
+            }            
+
+            #myId {
+                border: 2px solid purple;
+            } 
+
+            p {
+                color : orange;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <p class="myStyle" id="myId">Examples for priority level of selectors</p>
+    </body>
+</html>
+```
+[Click to View](https://codepen.io/michaelphamngo/pen/VwzQxLM)
+
+- combine selectors vs inline style
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>                        
+            #myId.myStyle {
+                color : violet;                
+                font-weight: bold;
+                border: 1px dashed violet;        
+            }            
+
+            #myId {
+                border: 2px solid purple;
+            } 
+
+            p {
+                color : orange;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <p class="myStyle" id="myId" style="color: blue; border: 3px dotted pink;">Examples for priority level of selectors</p>
+    </body>
+</html>
+```
+[Click to View](https://codepen.io/michaelphamngo/pen/mdMXLex)
+
+- !important vs inline style
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>        
+            p {
+                color: blue !important;
+                border: 2px solid orangered !important;
+                font-size: 14px !important;
+            }                
+            #myId.myStyle {
+                color : violet;                
+                font-weight: bold;
+                border: 1px dashed violet;        
+            }            
+
+            #myId {
+                border: 2px solid purple;
+            } 
+
+            p {
+                color : orange;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <p class="myStyle" id="myId" style="color: blue; border: 3px dotted pink;">Examples for priority level of selectors</p>
+    </body>
+</html>
+```
+[Click to View](https://codepen.io/michaelphamngo/pen/WNEMJrW)
 
 ### BEM
 
