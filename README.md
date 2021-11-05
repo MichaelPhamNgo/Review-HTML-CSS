@@ -285,7 +285,7 @@ The priority level of selectors
  *  3. Modifier: Either a block or element may have a variation signified by a modifier
  */
 ```
-![Toast Message](https://dribbble.com/shots/4580930-Toast-Messages/attachments/10477149?mode=media)
+<img src="https://dribbble.com/shots/4580930-Toast-Messages/attachments/10477149?mode=media" alt="Toast Message" height=200/>
 
 ### CSS units
 
