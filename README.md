@@ -276,7 +276,18 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/WNEMJrW)
 
-### BEM
+### BEM (Block Element Modifier)
+```javascript
+[block]__[element]--[modifier]
+/*
+ *  1. Block: The outermost parent element of the component
+ *  2. Element: Inside of the component may be one or more children
+ *  3. Modifier: Either a block or element may have a variation signified by a modifier
+ */
+```
+![Toast Message](https://dribbble.com/shots/4580930-Toast-Messages/attachments/10477149?mode=media)
+
+### CSS units
 
 ### CSS functions
 
@@ -311,7 +322,8 @@ The priority level of selectors
 
 #### Navigation
 
-#### Left
+#### Content
 
+### WebPages
 
 
