@@ -50,6 +50,7 @@ There are three ways of inserting a style sheet:
 </html>
 ```
 3. Inline CSS
+```html
 <!DOCTYPE html>
 <html>
     <head></head>
@@ -58,9 +59,24 @@ There are three ways of inserting a style sheet:
         <p style="color:red">This is an inline CSS</p>
     </body>
 </html>
+```
 
 The priority level of selectors
 
+| Order |   CSS Selectors           |
+|-------|---------------------------|
+| 1     |   !important              |
+| 2     |   Inside style attribute  |
+| 3     |   Combined selectors      |
+| 4     |   ID                      |
+| 5     |   class                   |
+| 6     |   attribute               |
+| 7     |   element                 |
+| 8     |   *                       |
+
+- \* vs element
+```html
+```
 ### BEM
 
 ### CSS functions
