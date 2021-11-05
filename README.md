@@ -76,7 +76,44 @@ The priority level of selectors
 
 - \* vs element
 ```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                color : red
+            }
+
+            p {
+                color : red
+            }
+        </style>
+    </head>
+    <body>
+        <p>Examples for priority level of selectors</p>
+    </body>
+</html>
 ```
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                color : red
+            }
+
+            p {
+                color : red
+            }
+        </style>
+    </head>
+    <body>
+        <p>Examples for priority level of selectors</p>
+    </body>
+</html>
+
+
+
 ### BEM
 
 ### CSS functions
