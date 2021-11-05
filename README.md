@@ -285,7 +285,15 @@ The priority level of selectors
  *  3. Modifier: Either a block or element may have a variation signified by a modifier
  */
 ```
-<img src="https://dribbble.com/shots/4580930-Toast-Messages/attachments/10477149?mode=media" alt="Toast Message" height=200/>
+
+- Example 1:
+<img src="https://github.com/MichaelPhamNgo/Review-CSS/blob/main/toast%20message.png" alt="Toast Message" height=350/>
+
+> Block: Toast
+> Elements: Icon, Title, Message, Close
+> Modifier: Success, Info, Warning
+
+
 
 ### CSS units
 
