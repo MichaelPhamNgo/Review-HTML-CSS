@@ -534,18 +534,7 @@ body {
 
 ### VIII.2 CSS Margin and Padding
 > The CSS Box Model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
------------------------------------------
-|                 Margin                |  
-|  ---------------Border-------------|  | 
-|  |              Padding            |  |    
-|  |  ----------------------------   |  |    
-|  |  |                          |   |  | 
-|  |  |          Content         |   |  |
-|  |  |__________________________|   |  |
-|  |             Padding             |  |
-|  |_____________Border______________|  |
-|                Margin                 |  
-|_______________________________________|
+<img src="https://github.com/MichaelPhamNgo/Review-HTML-CSS/blob/main/box%20model.png" alt="Box Model" height=350/>
 
 > Note: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 
