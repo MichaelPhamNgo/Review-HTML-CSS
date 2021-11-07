@@ -1,6 +1,6 @@
 # Review-HTML-CSS
 
-### CSS Syntax
+## I. CSS Syntax
 ```css
 selector {
     property : value,
@@ -9,7 +9,7 @@ selector {
 ```
 
 
-### CSS Selectors
+## II. CSS Selectors
 
 | Selector          |   Example                 |  Description                                          |
 |-------------------|---------------------------|-------------------------------------------------------|
@@ -21,7 +21,7 @@ selector {
 | element,element,..|   div,p                   | Selects all div tags and all p tags                   |  
 
 
-### CSS Declaration and Priority
+## III. CSS Declaration and Priority
 There are three ways of inserting a style sheet:
 1. External CSS
 ```html
@@ -276,7 +276,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/WNEMJrW)
 
-### BEM (Block Element Modifier)
+## IV. BEM (Block Element Modifier)
 ```javascript
 [block]__[element]--[modifier]
 /*
@@ -304,7 +304,7 @@ The priority level of selectors
 
 [Click to View](https://codepen.io/michaelphamngo/pen/WNEzNVY)
 
-### CSS units
+## V. CSS units
 
 The common css units using in a website
 
@@ -317,7 +317,7 @@ The common css units using in a website
 | vh   | Relative to 1% of the height of the viewport*                                                  |
 | %    | Relative to the parent element                                                                 |  
 
-### CSS functions
+## VI. CSS functions
 
 The common css functions using in a website
 
@@ -332,10 +332,10 @@ The common css functions using in a website
 | var               | Inserts the value of a custom property                                |[Click To View](https://codepen.io/michaelphamngo/pen/xxLWJwB)|  
 
 
-### CSS font and text
+## VII. CSS font and text
 
-#### CSS font
-1. The font web safe for a website: Georgia, Tahoma, Trebuchet MS, Helvetica, Verdana, Arial
+## VII.1 CSS font
+1. The fonts web safe for a website: Georgia, Tahoma, Trebuchet MS, Helvetica, Verdana, Arial
 2. Import font for a website
 > Import google font to html
 
@@ -424,6 +424,8 @@ body {
         </tr>
     </tbody>
 <table>
+
+## VII.2 CSS Text
 
 ### CSS padding, margin, and border
 
