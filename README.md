@@ -334,7 +334,7 @@ The common css functions using in a website
 
 ## VII. CSS font and text
 
-## VII.1 CSS font
+### VII.1 CSS font
 1. The fonts web safe for a website: Georgia, Tahoma, Trebuchet MS, Helvetica, Verdana, Arial
 2. Import font for a website
 > Import google font to html
@@ -425,7 +425,7 @@ body {
     </tbody>
 <table>
 
-## VII.2 CSS Text
+### VII.2 CSS Text
 
 ### CSS padding, margin, and border
 
