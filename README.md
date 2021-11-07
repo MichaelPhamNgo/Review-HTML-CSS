@@ -1,4 +1,4 @@
-# Review-CSS
+# Review-HTML-CSS
 
 ### CSS Syntax
 ```css
@@ -288,6 +288,7 @@ The priority level of selectors
 
 - Example 1:
 <img src="https://github.com/MichaelPhamNgo/Review-CSS/blob/main/toast%20message.png" alt="Toast Message" height=350/>
+
 > 1. Block: Toast <br/>
 > 2. Elements: Icon, Content (Title, Message), Close <br/>
 > 3. Modifier: Success, Info, Warning  <br/>
@@ -320,19 +321,109 @@ The common css units using in a website
 
 The common css functions using in a website
 
-| Function          |  Description                                                          |   Examples    |
-|-------------------|-----------------------------------------------------------------------|---------------|
-| attr              | Returns the value of an attribute of the selected element             |               |
-| calc              | Allows you to perform calculations to determine CSS property values   |               |
-| counter           | Returns the current value of the named counter                        |               |
-| cubic-bezier      | Defines a Cubic Bezier curve                                          |               |
-| linear-gradient   | Relative to 1% of the height of the viewport*                         |               |
-| rgba              | Defines colors using the Red-Green-Blue-Alpha model (RGBA)            |               |
-| rgb               | Defines colors using the Red-Green-Blue model (RGB)                   |               |  
-| var               | Inserts the value of a custom property                                |               |  
+| Function          |  Description                                                          |   Examples      |
+|-------------------|-----------------------------------------------------------------------|-----------------|
+| attr              | Returns the value of an attribute of the selected element             |[Click To View](https://codepen.io/michaelphamngo/pen/wvqmzaE)|
+| calc              | Allows you to perform calculations to determine CSS property values   |[Click To View](https://codepen.io/michaelphamngo/pen/jOLzMrR)|
+| counter           | Returns the current value of the named counter                        |[Click To View](https://codepen.io/michaelphamngo/pen/JjyLRNW)|
+| linear-gradient   | Sets a linear gradient as the background image                        |[Click To View](https://codepen.io/michaelphamngo/pen/KKvoeGm)|
+| rgba              | Defines colors using the Red-Green-Blue-Alpha model (RGBA)            |[Click To View](https://codepen.io/michaelphamngo/pen/yLoKEwz)|
+| rgb               | Defines colors using the Red-Green-Blue model (RGB)                   |[Click To View](https://codepen.io/michaelphamngo/pen/yLoKEwz)|  
+| var               | Inserts the value of a custom property                                |[Click To View](https://codepen.io/michaelphamngo/pen/xxLWJwB)|  
 
 
 ### CSS font and text
+
+#### CSS font
+1. The font web safe for a website: Georgia, Tahoma, Trebuchet MS, Helvetica, Verdana, Arial
+2. Import font for a website
+> Import google font to html
+
+```html
+<html>
+    <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 30px;    
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Sofia on Fire</h1>
+    </body>
+</html>
+```
+
+> Import google font to css
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;    
+}
+```
+
+> Beautiful google fonts: 
+
+- [Lato] (https://fonts.google.com/specimen/Lato)
+- [Montserrat] (https://fonts.google.com/specimen/Montserrat)
+- [Muli] (https://fonts.google.com/specimen/Muli)
+- [Nunito] (https://fonts.google.com/specimen/Nunito)
+- [Barlow] (https://fonts.google.com/specimen/Barlow)
+- [Poppins] (https://fonts.google.com/specimen/Poppins)
+- [Roboto] (https://fonts.google.com/specimen/Roboto)
+- [Source Sans Pro] (https://fonts.google.com/specimen/Source+Sans+Pro)
+- [Spectral] (https://fonts.google.com/specimen/Spectral)
+
+> The CSS Font Property
+
+<table>
+    <thead>
+        <th>Font Property</th>
+        <th>Description</th>
+        <th>CSS Syntax</th>        
+    </thead>
+    <tbody>
+        <tr>
+            <td>font</td>
+            <td>Sets all the font properties in one declaration</td>
+            <td>font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>font-style</td>
+            <td>Specifies the font style for text</td>
+            <td>font-style: normal|italic|oblique|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>font-variant </td>
+            <td>Specifies whether or not a text should be displayed in a small-caps font</td>
+            <td>font-variant: normal|small-caps|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>font-weight</td>
+            <td>Specifies the weight of a font</td>
+            <td>font-weight: normal|bold|bolder|lighter|number|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>font-size</td>
+            <td>Specifies the font size of text</td>
+            <td>font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;|</td>            
+        </tr>
+        <tr>
+            <td>line-height</td>
+            <td>Specifies the height of a line</td>
+            <td>line-height: normal|number|length|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>font-family</td>
+            <td>Specifies the font family for text</td>
+            <td>font-family: family-name|generic-family|initial|inherit;</td>            
+        </tr>
+    </tbody>
+<table>
 
 ### CSS padding, margin, and border
 
