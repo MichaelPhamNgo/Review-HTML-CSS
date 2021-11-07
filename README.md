@@ -9,7 +9,8 @@ selector {
 ```
 
 
-## II. CSS Selectors
+## II. CSS Selectors and Combinations
+### II.1 CSS Selectors
 
 | Selector          |   Example                 |  Description                                          |
 |-------------------|---------------------------|-------------------------------------------------------|
@@ -20,6 +21,19 @@ selector {
 | element           |   p                       | Selects all p tags                                    |
 | element,element,..|   div,p                   | Selects all div tags and all p tags                   |  
 
+### II.2 CSS Combinations
+- There are four different combinators in CSS:
+    - The descendant selector (space) matches all elements that are descendants of a specified element.
+    - The child selector (>) selects all elements that are the children of a specified element.
+    - The adjacent sibling selector (+) is used to select an element that is directly after another specific element.
+    - The general sibling selector (~) selects all elements that are next siblings of a specified element.
+    
+| Selector          | Example |  Description                                          |
+|-------------------|---------|-------------------------------------------|
+|element element    | div p   | Selects all p elements inside div elements                 |
+|element>element    | div > p | Selects all p elements where the parent is a div element        |
+|element+element    | div + p | Selects the first p element that are placed immediately after div elements |
+|element1~element2  | p ~ ul  | Selects every ul element that are preceded by a p element |
 
 ## III. CSS Declaration and Priority
 There are three ways of inserting a style sheet:
@@ -351,7 +365,7 @@ The common css functions using in a website
     </style>
     </head>
     <body>
-        <h1>Sofia on Fire</h1>
+        <h1>Roboto</h1>
     </body>
 </html>
 ```
@@ -410,7 +424,7 @@ body {
         <tr>
             <td>font-size</td>
             <td>Specifies the font size of text</td>
-            <td>font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;|</td>            
+            <td>font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;</td>            
         </tr>
         <tr>
             <td>line-height</td>
@@ -426,16 +440,162 @@ body {
 <table>
 
 ### VII.2 CSS Text
+<table>
+    <thead>
+        <th>Text Property</th>
+        <th>Description</th>
+        <th>CSS Syntax</th>        
+    </thead>
+    <tbody>
+        <tr>
+            <td>color</td>
+            <td>Specifies the color of text</td>
+            <td>color: color|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>text-align</td>
+            <td>Specifies the horizontal alignment of text in an element</td>
+            <td>text-align: left|right|center|justify|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>text-decoration</td>
+            <td>Specifies the decoration added to text, and is a shorthand property</td>
+            <td>text-decoration: overline|underline|line-through  color solid|wavy|double;</td>            
+        </tr>
+        <tr>
+            <td>text-indent</td>
+            <td>Specifies the indentation of the first line in a text-block</td>
+            <td>text-indent: length|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>text-justify</td>
+            <td>Specifies the justification method of text when text-align is set to "justify"</td>
+            <td>text-justify: auto|inter-word|inter-character|none|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>text-overflow</td>
+            <td>Specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped, display an ellipsis (...), or display a custom string</td>
+            <td>text-overflow: clip|ellipsis|string|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>text-shadow</td>
+            <td>Adds shadow to text</td>
+            <td>text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>text-transform</td>
+            <td>Controls the capitalization of text</td>
+            <td>text-transform: none|capitalize|uppercase|lowercase|initial|inherit;</td>            
+        </tr>
+    </tbody>
+<table>
 
-### CSS padding, margin, and border
+## VIII. CSS border, margin and padding
+### VIII.1 CSS border
+<table>
+    <thead>
+        <th>Border Property</th>
+        <th>Description</th>
+        <th>CSS Syntax</th>        
+    </thead>
+    <tbody>
+        <tr>
+            <td>border</td>
+            <td>A shorthand property for border-width, border-style, border-color</td>
+            <td>border: border-width border-style border-color|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>border-width</td>
+            <td>Sets the width of an element's four borders. This property can have from one to four values.</td>
+            <td>border-width: medium|thin|thick|length|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>border-style</td>
+            <td>Sets the style of an element's four borders. This property can have from one to four values.</td>
+            <td>border-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>border-color</td>
+            <td>Sets the color of an element's four borders. This property can have from one to four values.</td>
+            <td>border-color: color|transparent|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>border-image</td>
+            <td>Allows you to specify an image to be used as the border around an element.</td>
+            <td>border-image: source slice width outset repeat|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>border-radius</td>
+            <td>Defines the radius of the element's corners.</td>
+            <td>border-radius: 1-4 length|% initial|inherit;</td>            
+        </tr>        
+    </tbody>
+<table>
 
-### CSS shadow
+### VIII.2 CSS Margin and Padding
+> The CSS Box Model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
+-----------------------------------------
+|                 Margin                |  
+|  ---------------Border-------------|  | 
+|  |              Padding            |  |    
+|  |  ----------------------------   |  |    
+|  |  |                          |   |  | 
+|  |  |          Content         |   |  |
+|  |  |__________________________|   |  |
+|  |             Padding             |  |
+|  |_____________Border______________|  |
+|                Margin                 |  
+|_______________________________________|
+
+> Note: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
+
+```css
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+```
+
+> Here is the total width = 320px + 10px + 10px + 5px + 5px = 350px
+
+<table>    
+    <tbody>
+        <tr>
+            <td>margin</td>
+            <td>Sets the margins for an element. This property can have from one to four values.</td>
+            <td>margin: length|auto|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>padding</td>
+            <td>Sets the paddings for an element. This property can have from one to four values.</td>
+            <td>padding: length|initial|inherit;</td>            
+        </tr>        
+    </tbody>
+<table>
+
+### CSS box shadow
+
+### CSS outline
+
+### CSS icon
+
+### CSS link
+
+### CSS list
+
+### CSS table
+
+### CSS max width and min width
+
+### CSS inline-block
+
+### CSS align
 
 ### CSS pseudo classes
 
 ### CSS pseudo element
-
-### CSS list and table
 
 ### CSS background
 
