@@ -434,7 +434,7 @@ body {
             <td>font-family: family-name|generic-family|initial|inherit;</td>            
         </tr>
     </tbody>
-<table>
+</table>
 
 ### IV.2 CSS Text
 <table>
@@ -485,10 +485,11 @@ body {
             <td>text-transform: none|capitalize|uppercase|lowercase|initial|inherit;</td>            
         </tr>
     </tbody>
-<table>
+</table>
 
-## VIII. CSS border, margin and padding
-### VIII.1 CSS border
+## V. CSS border, outline, box shadown, margin and padding
+### V.1 CSS border and outline
+1. CSS border
 <table>
     <thead>
         <th>Border Property</th>
@@ -527,9 +528,61 @@ body {
             <td>border-radius: 1-4 length|% initial|inherit;</td>            
         </tr>        
     </tbody>
-<table>
+</table>
 
-### VIII.2 CSS Margin and Padding
+2. CSS outline is a line that is drawn around elements, outside the borders.
+<table>
+    <thead>
+        <th>Outline Property</th>
+        <th>Description</th>
+        <th>CSS Syntax</th>        
+    </thead>
+    <tbody>
+        <tr>
+            <td>outline</td>
+            <td>A shorthand property for outline-width, outline-style, outline-color</td>
+            <td>outline: outline-width outline-style outline-color|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>outline-color</td>
+            <td>Specifies the color of an outline.</td>
+            <td>outline-color: invert|color|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>outline-offset</td>
+            <td>Adds space between the outline and the edge or border of an element.</td>
+            <td>outline-offset: length|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>outline-style</td>
+            <td>Specifies the style of an outline.</td>
+            <td>outline-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>outline-width</td>
+            <td>Specifies the width of an outline.</td>
+            <td>outline-width: medium|thin|thick|length|initial|inherit;</td>            
+        </tr>       
+    </tbody>
+</table>
+
+3. CSS Box Shadow 
+<table>
+    <thead>
+        <th>Box Shadow Property</th>
+        <th>Description</th>
+        <th>CSS Syntax</th>        
+    </thead>
+    <tbody>
+        <tr>
+            <td>box-shadow</td>
+            <td>Attaches one or more shadows to an element</td>
+            <td>box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;</td>            
+        </tr>        
+    </tbody>
+</table>
+
+### V.2 CSS Margin and Padding
 > The CSS Box Model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
 
 <img src="https://github.com/MichaelPhamNgo/Review-HTML-CSS/blob/main/box%20model.png" alt="Box Model" height=350/>
@@ -566,25 +619,282 @@ div {
             <td>box-sizing: content-box|border-box|initial|inherit;</td>            
         </tr>        
     </tbody>
-<table>
+</table>
 
 [Click to View](https://codepen.io/michaelphamngo/pen/VwzxaBg)
 
-### CSS box shadow
+## VI. CSS icons
+### VI.1 Fontawesome icons (https://fontawesome.com/v5.15/icons)
+```html
+<html>
+    <head>
+        <!-- Import -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+        <!-- Use -->
+        <i class="fab fa-html5"></i>
+    </body>
+</html>
+```
 
+> OR
 
+```css
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+```
 
-### CSS outline
+### VI.2 Bootstrap icons (https://icons.getbootstrap.com)
+```html
+<html>
+    <head>
+        <!-- Import -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <!-- Use -->
+        <i class="bi bi-house"></i>
+    </body>
+</html>
+```
 
-### CSS icon
+> OR
 
-### CSS link
+```css
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+```
 
-### CSS list
+### VI.3 Ionic icons (https://ionic.io/ionicons)
+```html
+<html>
+    <head>        
+    </head>
+    <body>
+        <!-- Use -->
+        <ion-icon name="alarm-outline"></ion-icon>
+        <!-- Import -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
+```
 
-### CSS table
+### VI.4 Google icons (https://fonts.google.com/icons?selected=Material+Icons)
+```html
+<html>
+    <head>
+        <!-- Import -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <!-- Use -->
+        <span class="material-icons">home</span>
+    </body>
+</html>
+```
 
-### CSS max width and min width
+### VI.5 Line Awesome icons (https://icons8.com/line-awesome)
+```html
+<html>
+    <head>
+        <!-- Import -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    </head>
+    <body>
+        <!-- Use -->
+        <i class="las la-cat"></i>
+    </body>
+</html>
+```
+## VII. CSS link, list and table
+### VII.1 CSS link
+- The four links states are:
+    1. a:link (a normal, unvisited link)
+    2. a:visited (a link the user has visited)
+    3. a:hover (a link when the user mouses over it)
+    4. a:active (a link the moment it is clicked)
+
+- The CSS properties usually go with a link
+    1. font
+    2. color
+    3. background
+    4. text-decoration
+    5. padding
+    6. margin
+    7. border
+    8. display
+    9. text-align
+    10. ...
+
+### VII.2 CSS list
+- In HTML, there are two main types of lists:
+    1. unordered lists (ul) - the list items are marked with bullets
+    2. ordered lists (ol) - the list items are marked with numbers or letters
+
+<table>    
+    <tbody>
+        <tr>
+            <td>list-style</td>
+            <td>A shorthand for the following properties.</td>
+            <td>list-style: list-style-type list-style-position list-style-image|initial|inherit;</td>            
+        </tr>
+        <tr>
+            <td>list-style-type</td>
+            <td>Specifies the type of list-item marker in a list.</td>
+            <td>list-style-type: disc|circle|none|square|decimal|lower-alpha|lower-latin|lower-roman|upper-alpha|upper-latin|upper-roman;</td>            
+        </tr>  
+        <tr>
+            <td>list-style-image</td>
+            <td>Replaces the list-item marker with an image.</td>
+            <td>list-style-image: none|url|initial|inherit;</td>            
+        </tr>   
+        <tr>
+            <td>list-style-position</td>
+            <td>Specifies the position of the list-item markers (bullet points).</td>
+            <td>list-style-position: inside|outside|initial|inherit;</td>            
+        </tr>     
+    </tbody>
+</table>
+
+### VII.3 CSS table
+- All table's properties
+<table>        
+    <tr>
+        <td>Table's property</td>
+        <td>Description</td>        
+        <td>Example</td>        
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>The table itself</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr>  
+    <tr>
+        <td>thead</td>
+        <td>The table header</td>              
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr>   
+    <tr>
+        <td>tbody</td>
+        <td>The table body</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr>       
+    <tr>
+        <td>tfoot</td>
+        <td>The table footer</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr>    
+    <tr>
+        <td>tr</td>
+        <td>A table row</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr>  
+    <tr>
+        <td>th</td>
+        <td>A table cell that is a header</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr> 
+    <tr>
+        <td>td</td>
+        <td>A table cell that is data</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr> 
+    <tr>
+        <td>caption</td>
+        <td>Defines a table caption</td>        
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>
+    </tr>  
+    <tr>
+        <td>colgroup</td>
+        <td>Specifies a group of one or more columns in a table for formatting</td>       
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td> 
+    </tr> 
+    <tr>
+        <td>col</td>
+        <td>Specifies column properties for each column within a colgroup element</td>    
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td>    
+    </tr> 
+</table>
+
+- All table's attributes
+<table>        
+    <tr>
+        <td>Table's attribute</td>
+        <td>Element(s) Found On</td>
+        <td>Description</td>        
+        <td>Example</td>        
+    </tr>
+    <tr>
+        <td>colspan</td>
+        <td>th, td</td>  
+        <td>Extends a cell to be as wide as 2 or more cells</td>
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td> 
+    </tr>  
+    <tr>
+        <td>rowspan</td>
+        <td>th, td</td>  
+        <td>Extends a cell to be as tall as 2 or more cells</td>
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td> 
+    </tr>       
+    <tr>
+        <td>span</td>
+        <td>col</td>  
+        <td>Makes the column apply to more to 2 or more columns</td>
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvQJZ">Click To View</a></td> 
+    </tr>
+</table>
+
+- All CSS properties for a table
+<table>        
+    <tr>
+        <td>Property</td>     
+        <td>Description</td>        
+        <td>CSS Syntax</td>    
+        <td>Example</td>          
+    </tr>
+    <tr>
+        <td>border</td>        
+        <td>Add a border to a table</td>
+        <td>border: border-width border-style border-color|initial|inherit;</td>    
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>            
+    </tr>  
+    <tr>
+        <td>width</td>        
+        <td>Sets the width of a table</td>
+        <td>width: auto|value|initial|inherit;</td>  
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
+    </tr>   
+    <tr>
+        <td>height</td>        
+        <td>Sets the height of a table</td>
+        <td>height: auto|length|initial|inherit;</td>  
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
+    </tr>    
+    <tr>
+        <td>text-align</td>        
+        <td>Specifies the horizontal alignment of text in an element</td>
+        <td>text-align: left|right|center|justify|initial|inherit;</td>  
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
+    </tr> 
+    <tr>
+        <td>vertical-align</td>        
+        <td>Sets the vertical alignment of an element</td>
+        <td>vertical-align: baseline|top|middle|bottom;</td>  
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
+    </tr> 
+    <tr>
+        <td>border-collapse</td>        
+        <td>Sets whether table borders should collapse into a single border or be separated as in standard HTML</td>
+        <td>border-collapse: separate|collapse|initial|inherit;</td>  
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
+    </tr>  
+    <tr>
+        <td>border-spacing</td>        
+        <td>Sets the distance between the borders of adjacent cells</td>
+        <td>border-spacing: length|initial|inherit;</td>  
+        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
+    </tr> 
+</table>
 
 ### CSS inline-block
 
@@ -592,13 +902,15 @@ div {
 
 ### CSS overflow
 
-### CSS opacity
+### CSS opacity, visibility and display
 
 ### CSS pseudo classes
 
 ### CSS pseudo element
 
 ### CSS background
+
+### CSS bimage
 
 ### CSS overflow and float
 
