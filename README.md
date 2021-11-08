@@ -1,6 +1,8 @@
 # Review-HTML-CSS
 
 ## I. CSS Syntax
+
+### I.1 CSS Declaration
 ```css
 selector {
     property : value,
@@ -8,10 +10,7 @@ selector {
 }
 ```
 
-
-## II. CSS Selectors and Combinations
-### II.1 CSS Selectors
-
+### I.2 CSS Selectors
 | Selector          |   Example                 |  Description                                          |
 |-------------------|---------------------------|-------------------------------------------------------|
 | #id               |   #theId                  | Selects the element with id = "theId"                 |
@@ -21,7 +20,7 @@ selector {
 | element           |   p                       | Selects all p tags                                    |
 | element,element,..|   div,p                   | Selects all div tags and all p tags                   |  
 
-### II.2 CSS Combinations
+### I.3 CSS Selector Combinations
 - There are four different combinators in CSS:
     - The descendant selector (space) matches all elements that are descendants of a specified element.
     - The child selector (>) selects all elements that are the children of a specified element.
@@ -35,8 +34,9 @@ selector {
 |element+element    | div + p | Selects the first p element that are placed immediately after div elements |
 |element1~element2  | p ~ ul  | Selects every ul element that are preceded by a p element |
 
-## III. CSS Declaration and Priority
-There are three ways of inserting a style sheet:
+### I.4 Import CSS to HTML file
+> There are three ways of inserting a style sheet:
+
 1. External CSS
 ```html
 <!DOCTYPE html>
@@ -49,6 +49,7 @@ There are three ways of inserting a style sheet:
     </body>
 </html>
 ```
+
 2. Internal CSS
 ```html
 <!DOCTYPE html>
@@ -63,6 +64,7 @@ There are three ways of inserting a style sheet:
     </body>
 </html>
 ```
+
 3. Inline CSS
 ```html
 <!DOCTYPE html>
@@ -75,7 +77,7 @@ There are three ways of inserting a style sheet:
 </html>
 ```
 
-The priority level of selectors
+### I.5 The priority level of selectors
 
 | Order |   CSS Selectors           |
 |-------|---------------------------|
@@ -88,7 +90,7 @@ The priority level of selectors
 | 7     |   element                 |
 | 8     |   *                       |
 
-- \* vs element
+1. \* vs element
 ```html
 <!DOCTYPE html>
 <html>
@@ -111,7 +113,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/NWvyYzB)
 
-- element vs attribute
+2. element vs attribute
 ```html
 <!DOCTYPE html>
 <html>
@@ -136,7 +138,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/vYJdRQZ)
 
-- attribute vs class
+3. attribute vs class
 ```html
 <!DOCTYPE html>
 <html>
@@ -165,7 +167,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/dyzdmEW)
 
-- class vs id
+4. class vs id
 ```html
 <!DOCTYPE html>
 <html>
@@ -195,7 +197,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/VwzQxZz)
 
-- id vs combine selectors
+5. id vs combine selectors
 ```html
 <!DOCTYPE html>
 <html>
@@ -225,7 +227,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/VwzQxLM)
 
-- combine selectors vs inline style
+6. combine selectors vs inline style
 ```html
 <!DOCTYPE html>
 <html>
@@ -255,7 +257,7 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/mdMXLex)
 
-- !important vs inline style
+7. !important vs inline style
 ```html
 <!DOCTYPE html>
 <html>
@@ -290,7 +292,9 @@ The priority level of selectors
 ```
 [Click to View](https://codepen.io/michaelphamngo/pen/WNEMJrW)
 
-## IV. BEM (Block Element Modifier)
+## II. BEM (Block Element Modifier)
+> BEM is a popular naming convention for classes in HTML and CSS. Its goal is to help developers better understand the relationship between the HTML and CSS in a given project.
+
 ```javascript
 [block]__[element]--[modifier]
 /*
@@ -318,9 +322,9 @@ The priority level of selectors
 
 [Click to View](https://codepen.io/michaelphamngo/pen/WNEzNVY)
 
-## V. CSS units
-
-The common css units using in a website
+## III. CSS units and functions
+### III.1 CSS units
+> The common css units using in a website
 
 | Unit |  Description                                                                                   |
 |------|------------------------------------------------------------------------------------------------|
@@ -331,9 +335,8 @@ The common css units using in a website
 | vh   | Relative to 1% of the height of the viewport*                                                  |
 | %    | Relative to the parent element                                                                 |  
 
-## VI. CSS functions
-
-The common css functions using in a website
+### III.2 CSS functions
+> The common css functions using in a website
 
 | Function          |  Description                                                          |   Examples      |
 |-------------------|-----------------------------------------------------------------------|-----------------|
@@ -345,13 +348,10 @@ The common css functions using in a website
 | rgb               | Defines colors using the Red-Green-Blue model (RGB)                   |[Click To View](https://codepen.io/michaelphamngo/pen/yLoKEwz)|  
 | var               | Inserts the value of a custom property                                |[Click To View](https://codepen.io/michaelphamngo/pen/xxLWJwB)|  
 
-
-## VII. CSS font and text
-
-### VII.1 CSS font
+## IV. CSS font and text
+### IV.1 CSS font
 1. The fonts web safe for a website: Georgia, Tahoma, Trebuchet MS, Helvetica, Verdana, Arial
-2. Import font for a website
-> Import google font to html
+2. Import google font to html
 
 ```html
 <html>
@@ -370,7 +370,7 @@ The common css functions using in a website
 </html>
 ```
 
-> Import google font to css
+> OR
 
 ```css
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -379,9 +379,7 @@ body {
     font-size: 30px;    
 }
 ```
-
-> Beautiful google fonts: 
-
+3. Beautiful google fonts
 - [Lato] (https://fonts.google.com/specimen/Lato)
 - [Montserrat] (https://fonts.google.com/specimen/Montserrat)
 - [Muli] (https://fonts.google.com/specimen/Muli)
@@ -392,8 +390,7 @@ body {
 - [Source Sans Pro] (https://fonts.google.com/specimen/Source+Sans+Pro)
 - [Spectral] (https://fonts.google.com/specimen/Spectral)
 
-> The CSS Font Property
-
+4. The CSS Font Property
 <table>
     <thead>
         <th>Font Property</th>
@@ -439,7 +436,7 @@ body {
     </tbody>
 <table>
 
-### VII.2 CSS Text
+### IV.2 CSS Text
 <table>
     <thead>
         <th>Text Property</th>
@@ -534,9 +531,12 @@ body {
 
 ### VIII.2 CSS Margin and Padding
 > The CSS Box Model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
+
 <img src="https://github.com/MichaelPhamNgo/Review-HTML-CSS/blob/main/box%20model.png" alt="Box Model" height=350/>
 
 > Note: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
+
+Example:
 
 ```css
 div {
@@ -546,7 +546,6 @@ div {
   margin: 0;
 }
 ```
-
 > Here is the total width = 320px + 10px + 10px + 5px + 5px = 350px
 
 <table>    
@@ -560,11 +559,20 @@ div {
             <td>padding</td>
             <td>Sets the paddings for an element. This property can have from one to four values.</td>
             <td>padding: length|initial|inherit;</td>            
+        </tr>  
+        <tr>
+            <td>box-sizing</td>
+            <td>Defines how the width and height of an element are calculated: should they include padding and borders, or not.</td>
+            <td>box-sizing: content-box|border-box|initial|inherit;</td>            
         </tr>        
     </tbody>
 <table>
 
+[Click to View](https://codepen.io/michaelphamngo/pen/VwzxaBg)
+
 ### CSS box shadow
+
+
 
 ### CSS outline
 
@@ -582,6 +590,10 @@ div {
 
 ### CSS align
 
+### CSS overflow
+
+### CSS opacity
+
 ### CSS pseudo classes
 
 ### CSS pseudo element
@@ -598,15 +610,32 @@ div {
 
 ### CSS grid
 
+### CSS Tooltips
+
 ### Components in Website
+
 #### Header
 
 #### Footer
 
 #### Navigation
 
+#### Dropdown
+
+#### Image Gallery
+
+#### CSS Image Sprites
+
+#### Forms
+
 #### Content
+
+#### Pagination
+
+#### Buttons
+
+#### AutoComplete Input
 
 ### WebPages
 
-
+### CSS Responsive
