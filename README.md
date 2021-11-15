@@ -434,7 +434,7 @@ body {
             <td>font-family: family-name|generic-family|initial|inherit;</td>            
         </tr>
     </tbody>
-</table>
+</table>Responsive Sidebar
 
 ### IV.2 CSS Text
 <table>
@@ -875,13 +875,7 @@ div {
         <td>Specifies the horizontal alignment of text in an element</td>
         <td>text-align: left|right|center|justify|initial|inherit;</td>  
         <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
-    </tr> 
-    <tr>
-        <td>vertical-align</td>        
-        <td>Sets the vertical alignment of an element</td>
-        <td>vertical-align: baseline|top|middle|bottom;</td>  
-        <td><a href="https://codepen.io/michaelphamngo/pen/rNzvoxg">Click To View</a></td>
-    </tr> 
+    </tr>     
     <tr>
         <td>border-collapse</td>        
         <td>Sets whether table borders should collapse into a single border or be separated as in standard HTML</td>
@@ -896,11 +890,8 @@ div {
     </tr> 
 </table>
 
-### CSS inline-block
-
-### CSS align
-
 ### CSS overflow
+
 
 ### CSS opacity, visibility and display
 
@@ -910,17 +901,19 @@ div {
 
 ### CSS background
 
-### CSS bimage
+### CSS image
 
 ### CSS overflow and float
 
 ### CSS position and display
 
-### CSS animation
-
 ### CSS flexbox
 
 ### CSS grid
+
+### CSS responsive
+
+### CSS animation
 
 ### CSS Tooltips
 
