@@ -14,15 +14,6 @@ a {
     text-decoration: none;
 }
 
-.container {
-    max-width: 1800px;
-    margin: 0 auto;    
-} 
-
-.bgColor {
-    background-color: #111;    
-}
-
 nav {    
     top: 0;    
     left: 0;
@@ -41,7 +32,7 @@ nav {
 }
 
 
-.nav__menu #nav__menu_bars {
+.nav__menu a#nav__menu_bars {
     display: none;
 }
 
@@ -58,11 +49,24 @@ nav {
     color: #111;
 }
 
-.nav__menu #nav__menu_merch {
+.nav__menu li#nav__menu_merch {
     display: none;
 }
 
-.menu__submenu {
+.nav__menu .menu__dropdown{
+    position: relative;
+}
+
+.nav__menu .menu__dropdown:hover > a {
+    background: #bbb;
+    color: #111;
+}
+
+.nav__menu .menu__dropdown:hover .menu__submenu{
+    display: block;
+}
+
+.nav__menu .menu__dropdown .menu__submenu {
     position: absolute;    
     width: 10rem;
     background: #efefef;
@@ -72,28 +76,15 @@ nav {
     display: none;        
 }
 
-.menu__submenu a {
+.nav__menu .menu__dropdown .menu__submenu a {
     text-transform:capitalize;
     color: #111;
     font-size: 1.2rem;    
     display: block;
 }
 
-.menu__submenu a:hover{
+.nav__menu .menu__dropdown .menu__submenu a:hover{
     background: #bbb;
-}
-
-.menu__dropdown{
-    position: relative;
-}
-
-.menu__dropdown:hover .menu__submenu{
-    display: block;
-}
-
-.menu__dropdown:hover > a {
-    background: #bbb;
-    color: #111;
 }
 
 .nav__search {
@@ -127,11 +118,11 @@ nav {
         color: #111;
     }
 
-    .nav__menu #nav__menu_bars {
+    .nav__menu a#nav__menu_bars {
         display: block;
     }
     
-    #nav__menu_home {
+    .nav__menu li#nav__menu_home {
         display: flex;
         justify-content: space-between;
     }
@@ -143,6 +134,15 @@ nav {
     .menu__dropdown {
         display: none;
     }
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;    
+} 
+
+.container.bgColor {
+    background-color: #111;    
 }
 
 .slider {     
@@ -178,13 +178,13 @@ nav {
     padding: 5rem 0;
 }
 
-.music h1 {
+.music h1.music__singer {
     font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;    
 }
 
-.music h4 {
+.music h4.music__title {
     font-size: 1rem;    
     text-align: center;
     font-style: italic;
@@ -192,23 +192,23 @@ nav {
     margin: 1.5rem;
 }
 
-.music > p {
+.music p.music__lyric {
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 3rem;
 }
 
-.music__albums {
+.music .music__albums {
     display: flex;
     justify-content: space-around;
     text-align: center;
 }
 
-.music__albums .album p{    
+.music .music__albums .album p.album__title{    
     margin-bottom: 1rem;
 }
 
-.music__albums .album img{
+.music .music__albums .album img{
     border-radius: 5px;
     width: 70%;
 }
@@ -240,37 +240,37 @@ nav {
     padding: 5rem 0;    
 }
 
-.tour h1 {
+.tour .tour__info h1.tour__title {
     font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;   
     color: #efefef; 
 }
 
-.tour h4 {
+.tour .tour__info h4.tour__description {
     font-size: 1rem;    
     text-align: center;
     font-style: italic;
     color: #666;    
 }
 
-.tour .tour__books .tour__book{
+.tour .tour__info .tour__books .tour__book{
     background: #efefef;
     padding: 0.8rem;  
     overflow: hidden;
 }
 
-.tour .tour__books .tour__book:not(:last-child){    
+.tour .tour__info .tour__books .tour__book:not(:last-child){    
     border-bottom: 1px solid #ccc;
 }
 
-.tour .tour__books .tour__book .tour__book_soldout {
+.tour .tour__info .tour__books .tour__book .tour__book_soldout {
     padding: 0.2rem 0.5rem;
     background-color: orangered;
     color: #efefef;
 }
 
-.tour .tour__books .tour__book .tour__book_sold {
+.tour .tour__info .tour__books .tour__book .tour__book_sold {
     padding: 0.3rem 0.6rem;
     background: #111;
     border-radius: 50%;
@@ -278,29 +278,29 @@ nav {
     float: right;
 }
 
-.tour__places {    
+.tour .tour__info .tour__places {    
     display: flex;
     justify-content:space-between;    
 }
 
-.tour__places .tour__place {    
+.tour .tour__info .tour__places .tour__place {    
     background: #efefef;
     width: 15.4rem;
 }
 
-.tour__places .tour__place img{    
+.tour .tour__info .tour__places .tour__place img{    
     width: 100%;   
 }
 
-.tour__places .tour__place img:hover{    
+.tour .tour__info .tour__places .tour__place img:hover{    
     opacity: 0.8;  
 }
 
-.tour__places .tour__place .tour__detail {
+.tour .tour__info .tour__places .tour__place .tour__detail {
     padding: 1rem;
 }
 
-.tour__places .tour__place h4{    
+.tour .tour__info .tour__places .tour__place h4{    
     font-style: normal;
     font-size: 1.2rem;
     text-align: left;
@@ -309,13 +309,13 @@ nav {
     margin: 0;
 }
 
-.tour__places .tour__place p.tour__date{            
+.tour .tour__info .tour__places .tour__place p.tour__date{            
     text-align: left;
     color: #666;  
     padding-bottom: 1rem;  
 }
 
-.tour__places .tour__place p.tour__description{            
+.tour .tour__info .tour__places .tour__place p.tour__description{            
     text-align: left;    
     padding-bottom: 1rem;   
     line-height: 1.4;
@@ -344,7 +344,7 @@ nav {
         margin: 0 auto;
     }
 
-    .tour__books {        
+    .tour .tour__info .tour__books {        
         margin: 2rem 0;
     }
 }
@@ -355,15 +355,15 @@ nav {
         padding: 5rem 1.5rem;  
     }
 
-    .tour__books {
+    .tour .tour__info .tour__books {
         margin: 2rem 0;
     }
 
-    .tour .tour__places {
+    .tour .tour__info .tour__places {
         display: block;
     }
 
-    .tour__places .tour__place {        
+    .tour .tour__info .tour__places .tour__place {        
         width: 100%;
         margin: 2rem 0;
     }
@@ -373,13 +373,13 @@ nav {
     padding: 5rem 0;
 }
 
-.contact h1 {
+.contact h1.contact__title {
     font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;    
 }
 
-.contact h4 {
+.contact h4.contact__note {
     font-size: 1rem;    
     text-align: center;
     font-style: italic;
@@ -387,38 +387,38 @@ nav {
     margin: 1.5rem;
 }
 
-.contact__data {
+.contact .contact__data {
     display: flex;
 }
 
-.contact__info, .contact__form {
+.contact .contact__data .contact__info, .contact .contact__data .contact__form {
     flex: 1;
 }
 
-.contact__info_row {
+.contact .contact__data .contact__info .contact__info_row {
     display: flex;
     padding: 0.2rem;
 }
 
-.contact__info_logo {
+.contact .contact__data .contact__info .contact__info_row .contact__info_logo {
     min-width: 3rem;
 }
 
-.contact__info_title {
+.contact .contact__data .contact__info .contact__info_row .contact__info_title {
     flex: 1;
 }
 
-.contact__form_row {
+.contact .contact__data .contact__form_row {
     display: flex;
     padding: 0.5rem;
 }
 
-.contact__form_cell {
+.contact .contact__data .contact__form_row .contact__form_cell {
     padding: 0.2rem;
     flex: 1;
 }
 
-input[type=text] {
+.contact .contact__data .contact__form_row .contact__form_cell input[type=text] {
     padding: 0.8rem;
     border: 1px solid #ccc;
     width: 100%;
@@ -450,11 +450,11 @@ input[type=text] {
         display: block;
     }
 
-    .contact .contact__form {
+    .contact .contact__data .contact__form {
         margin: 2rem 0;
     }
 
-    .contact__form_row {
+    .contact .contact__data .contact__form .contact__form_row {
         display: block;
         padding: 0;
     }
