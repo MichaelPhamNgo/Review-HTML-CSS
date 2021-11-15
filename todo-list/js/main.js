@@ -3,8 +3,8 @@ const tasks = document.querySelector("#todos");
 let editTaskId = -1;
 function loadTodos() {
   const todos = JSON.parse(localStorage.getItem("todos"));
-  if (todos !== null) {
-    const todoClasses = tasks.classList;
+  const todoClasses = tasks.classList;  
+  if (todos.length > 0) {   
     if (!todoClasses.contains("todo__tasks")) {
       todoClasses.add("todo__tasks");
     }
@@ -26,6 +26,11 @@ function loadTodos() {
       res = res.concat(todoTasks[i]);
     }
     tasks.innerHTML = res;
+  } else {    
+    if (todoClasses.contains("todo__tasks")) {
+        todoClasses.remove("todo__tasks");
+    }
+    tasks.innerHTML = "";
   }
 }
 
@@ -73,7 +78,7 @@ document
         loadTodos();
         editTaskId = -1;
       }
-    }
+    }    
   });
 
 document
@@ -121,7 +126,7 @@ document
           editTaskId = -1;
         }
       }
-    }
+    }    
   });
 
 function readTask(task) {
@@ -147,4 +152,18 @@ function editTask(task) {
     }
   }
   document.querySelector(".todo__input_text").value = title;
+}
+
+function deleteTask(task) {
+    const title = task.parentNode.previousElementSibling.innerHTML;
+  let todos = JSON.parse(localStorage.getItem("todos"));
+  for (let i = 0; i < todos.length; ++i) {
+    if (todos[i].title.toLowerCase().localeCompare(title.toLowerCase()) === 0) {
+        todos.splice(i,1);
+        localStorage.setItem("todos", JSON.stringify(todos));
+        break;
+    }
+  }  
+  document.querySelector(".todo__input_text").value = "";
+  loadTodos();
 }
