@@ -30,8 +30,8 @@ setInterval(function(){
     }
     slideShow.style.backgroundImage = `url(${slideShows[i].src})`;
     slideShow.innerHTML = 
-       ` class="slider-place">${slideShows[i].title}</h1>
-         class="slider-brief">${slideShows[i].description}</h3>`;    
+       `<h1 class="slider-place">${slideShows[i].title}</h1>
+        <h3 class="slider-brief">${slideShows[i].description}</h3>`;    
 }, 5000);
 
 document.querySelector("#nav-menu-bars").addEventListener('click', function(){
