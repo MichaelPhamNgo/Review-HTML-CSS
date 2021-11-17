@@ -21,10 +21,8 @@ let i = 0;
 slideShow.style.backgroundImage = `url(${slideShows[i].src})`;
 slideShow.style.backgroundImage = `url(${slideShows[i].src})`;
 slideShow.innerHTML = 
-`<div class="slider__content">
-    <h1 class="slider__content_title">${slideShows[i].title}</h1>
-    <p class="slider__content_description">${slideShows[i].description}</p>
-</div>`;
+`<h1 class="slider-place">${slideShows[i].title}</h1>
+ <h3 class="slider-brief">${slideShows[i].description}</h3>`;
 setInterval(function(){    
     i++;
     if(i >= slideShows.length) {
@@ -32,14 +30,12 @@ setInterval(function(){
     }
     slideShow.style.backgroundImage = `url(${slideShows[i].src})`;
     slideShow.innerHTML = 
-    `<div class="slider__content">
-        <h1 class="slider__content_title">${slideShows[i].title}</h1>
-        <p class="slider__content_description">${slideShows[i].description}</p>
-    </div>`;    
+       ` class="slider-place">${slideShows[i].title}</h1>
+         class="slider-brief">${slideShows[i].description}</h3>`;    
 }, 5000);
 
-document.querySelector("#nav__menu_bars").addEventListener('click', function(){
-    const navMenuChildren = document.querySelector(".nav__menu").children;
+document.querySelector("#nav-menu-bars").addEventListener('click', function(){
+    const navMenuChildren = document.querySelector(".nav-menu ul").children;
     if(navMenuChildren[1].style.display === '' || navMenuChildren[1].style.display === 'none') {
         for(let i = 1; i < 5; ++i) {
             navMenuChildren[i].style.display = 'block';

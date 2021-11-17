@@ -1,499 +1,545 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 * {
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --font-color-white: #efefef;
+  --font-color-black: #111;
+  --font-color-gray: #aaa;
+  --background-color-white: #efefef;
+  --background-color-black: #111;
+  --background-color-hover: #bbb;
+  --columns: 3;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--font-color-white);
 }
 
-nav {    
-    top: 0;    
-    left: 0;
-    position: fixed;
-    background-color: #111;    
-    width: 100%;
-    z-index: 1;
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--background-color-hover);
+  outline: none;
 }
 
-.nav__menu {        
-    float: left;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--background-color-black);
+  width: 100%;
+  z-index: 1;
 }
 
-.nav__menu li {
-    float: left;
+.nav-menu {
+  float: left;
 }
 
+.nav-search {
+  float: right;
+}
 
-.nav__menu a#nav__menu_bars {
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu ul li {
+  float: left;
+}
+
+.nav-menu ul li:nth-child(5) {
+  display: none;
+}
+
+.nav-menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-menu ul li {
+    float: none;
+  }
+
+  .nav-menu ul li:not(:first-child) {
     display: none;
-}
+  }
 
-.nav__menu a {
-    text-transform: uppercase;
-    color: #efefef;
-    font-size: 1.2rem;
-    padding: 1rem 1.5rem;
-    display: block;
-}
+  .nav-menu ul li:first-child::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
 
-.nav__menu a:hover {
-    background: #bbb;
-    color: #111;
-}
-
-.nav__menu li#nav__menu_merch {
-    display: none;
-}
-
-.nav__menu .menu__dropdown{
-    position: relative;
-}
-
-.nav__menu .menu__dropdown:hover > a {
-    background: #bbb;
-    color: #111;
-}
-
-.nav__menu .menu__dropdown:hover .menu__submenu{
-    display: block;
-}
-
-.nav__menu .menu__dropdown .menu__submenu {
-    position: absolute;    
-    width: 10rem;
-    background: #efefef;
-    box-shadow: 0px 0px 5px #bfbfbfcc;
-    top: 100%;
-    left: 0;
-    display: none;        
-}
-
-.nav__menu .menu__dropdown .menu__submenu a {
-    text-transform:capitalize;
-    color: #111;
-    font-size: 1.2rem;    
-    display: block;
-}
-
-.nav__menu .menu__dropdown .menu__submenu a:hover{
-    background: #bbb;
-}
-
-.nav__search {
-    float: right;
-}
-
-.nav__search a {
-    display: block;
-    color: white;
-    padding: 1.11rem;
-}
-
-.nav__search a:hover {
-    background: orangered;
-}
-
-@media screen and (max-width: 768px){
-    .nav__menu {        
-        float: none;
-    }
-
-    .nav__menu li {
-        float: none;
-    }
-
-    .nav__menu li:not(:first-child) {
-        display: none;
-    }
-
-    .nav__menu li:hover {                
-        color: #111;
-    }
-
-    .nav__menu a#nav__menu_bars {
-        display: block;
-    }
-    
-    .nav__menu li#nav__menu_home {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .nav__search {
-        display: none;
-    }
-
-    .menu__dropdown {
-        display: none;
-    }
-}
-
-.container {
-    max-width: 1800px;
-    margin: 0 auto;    
-} 
-
-.container.bgColor {
-    background-color: #111;    
-}
-
-.slider {     
-    margin-top: 3.45rem;    
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 50%;
-    position: relative;
-    z-index: -1;    
-}
-
-.slider .slider__content {
-    position: absolute;
-    bottom: 0;
+  .nav-menu ul li a {
     width: 100%;
+  }
+
+  .pull-to-right i {
+    color: var(--font-color-white);
+    padding: 10px;
+    display: block;
+  }
+
+  .pull-to-right i:hover {
+    color: var(--font-color-black);
+    background: var(--background-color-white);
+  }
+
+  .nav-menu {
+    float: none;
+  }
+
+  .nav-search {
+    float: none;
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
 }
 
-.slider .slider__content h1 {
-    color: #efefef;
-    text-align: center;
-    font-size: 3rem;    
+.nav-menu ul li a:hover {
+  background: var(--background-color-white);
+  color: var(--font-color-black);
 }
 
-.slider .slider__content p {
-    color: #efefef;
-    text-align: center;
-    font-size: 1rem;
-    padding: 2rem 3rem 4rem 3rem;
+.dropdown .submenu {
+  position: absolute;
+  background: var(--background-color-white);
+  display: none;
 }
 
-.music {
-    padding: 5rem 0;
+.dropdown .submenu a {
+  color: var(--font-color-black);
+  text-transform: capitalize;
 }
 
-.music h1.music__singer {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    text-align: center;    
+.dropdown .submenu a:hover {
+  background: var(--background-color-hover);
 }
 
-.music h4.music__title {
-    font-size: 1rem;    
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    margin: 1.5rem;
+.dropdown:hover .submenu {
+  display: block;
 }
 
-.music p.music__lyric {
-    line-height: 1.5;
-    text-align: justify;
-    margin-bottom: 3rem;
+.dropdown:hover > a {
+  background: var(--background-color-white);
+  color: var(--font-color-black);
 }
 
-.music .music__albums {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+.nav-search a {
+  display: block;
+  padding: 8px 12px;
 }
 
-.music .music__albums .album p.album__title{    
-    margin-bottom: 1rem;
+.nav-search a:hover {
+  background: orangered;
 }
 
-.music .music__albums .album img{
-    border-radius: 5px;
-    width: 70%;
+.slider {
+  background-image: url("https://www.w3schools.com/w3images/la.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 50%;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 768px) {
-    .music {
-        width: 768px;
-        margin: 0 auto;
-    }
+.slider .slider-place {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--font-color-white);
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .music {
-        width: 100%;      
-        padding: 5rem 1rem;  
-    }
-
-    .music .music__albums {
-        display: block;
-    }
-
-    .music .music__albums .album img{
-        width: 40%;
-    }
+.slider .slider-brief {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--font-color-white);
+  font-weight: 400;
 }
 
+@media only screen and (max-width: 767px) {
+  .slider .slider-place {
+    display: none;
+  }
 
-.tour {
-    padding: 5rem 0;    
+  .slider .slider-brief {
+    display: none;
+  }
 }
 
-.tour .tour__info h1.tour__title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    text-align: center;   
-    color: #efefef; 
+.wrapper {
+  padding: 10px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
-.tour .tour__info h4.tour__description {
-    font-size: 1rem;    
-    text-align: center;
-    font-style: italic;
-    color: #666;    
+.band .band-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--font-color-black);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.tour .tour__info .tour__books .tour__book{
-    background: #efefef;
-    padding: 0.8rem;  
-    overflow: hidden;
+.band .band-brief {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--font-color-gray);
+  font-weight: 300;
+  text-transform: capitalize;
+  font-style: italic;
+  margin: 15px 0;
 }
 
-.tour .tour__info .tour__books .tour__book:not(:last-child){    
-    border-bottom: 1px solid #ccc;
+.band .band-desc {
+  text-align: justify;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 
-.tour .tour__info .tour__books .tour__book .tour__book_soldout {
-    padding: 0.2rem 0.5rem;
-    background-color: orangered;
-    color: #efefef;
+.band-albums {
+  overflow: hidden;
+  margin: 50px 0;
 }
 
-.tour .tour__info .tour__books .tour__book .tour__book_sold {
-    padding: 0.3rem 0.6rem;
-    background: #111;
-    border-radius: 50%;
-    color: #efefef;
-    float: right;
+.band-album {
+  width: calc(100% / var(--columns));
+  float: left;
 }
 
-.tour .tour__info .tour__places {    
-    display: flex;
-    justify-content:space-between;    
+@media only screen and (max-width: 767px) {
+  .band-album {
+    width: calc(100%);
+  }
 }
 
-.tour .tour__info .tour__places .tour__place {    
-    background: #efefef;
-    width: 15.4rem;
+.band-album .band-album-title {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.tour .tour__info .tour__places .tour__place img{    
-    width: 100%;   
+.band-album .band-album-img {
+  text-align: center;
 }
 
-.tour .tour__info .tour__places .tour__place img:hover{    
-    opacity: 0.8;  
+.band-album .band-album-img img {
+  width: 50%;
+  border-radius: 5px;
 }
 
-.tour .tour__info .tour__places .tour__place .tour__detail {
-    padding: 1rem;
+.tour .tour-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--font-color-white);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.tour .tour__info .tour__places .tour__place h4{    
-    font-style: normal;
-    font-size: 1.2rem;
-    text-align: left;
-    color: #111;
-    padding: 1rem 0;
-    margin: 0;
+.tour .tour-brief {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--font-color-gray);
+  font-weight: 300;
+  text-transform: capitalize;
+  font-style: italic;
+  margin: 15px 0;
 }
 
-.tour .tour__info .tour__places .tour__place p.tour__date{            
-    text-align: left;
-    color: #666;  
-    padding-bottom: 1rem;  
+ul.tour-tickets {
+  list-style: none;
 }
 
-.tour .tour__info .tour__places .tour__place p.tour__description{            
-    text-align: left;    
-    padding-bottom: 1rem;   
-    line-height: 1.4;
+ul.tour-tickets li.tour-ticket {
+  background: var(--background-color-white);
+  padding: 8px;
+  overflow: hidden;
+}
+
+ul.tour-tickets li.tour-ticket:not(:last-child) {
+  border-bottom: 1px solid var(--background-color-hover);
+}
+
+.tour-ticket .tour-ticket-date {
+  font-size: 0.8rem;
+  color: var(--font-color-gray);
+  margin-right: 10px;
+}
+
+.tour-ticket .tour-ticket-sold {
+  font-size: 0.8rem;
+  color: var(--font-color-white);
+  background: red;
+  padding: 2px 6px;
+}
+
+.tour-ticket .tour-ticket-quantity {
+  border-radius: 50%;
+  background: var(--background-color-black);
+  color: white;
+  padding: 3px 8px;
+}
+
+.tour-shows {
+  padding: 20px 0;
+  overflow: hidden;
+  margin-left: -15px;
+  /** begin shrink detail **/
+  display: flex;
+  flex-wrap: wrap;
+  /** end shrink detail **/
+}
+
+.tour-show {
+  float: left;
+  width: calc(calc(100% / var(--columns)) - 15px);
+  background: var(--background-color-white);
+  margin: 15px 0 0 15px;
+  /** begin shrink detail **/
+  display: flex;
+  flex-direction: column;
+  /** end shrink detail **/
+}
+
+@media only screen and (max-width: 767px) {
+  .tour-show {
+    width: calc(100% - 5px);
+  }
+}
+
+.tour-show img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tour-show img:hover {
+  opacity: 0.8;
+}
+
+.tour-show-info {
+  padding: 15px;
+}
+
+.tour-show-info h1 {
+  font-size: 0.8rem;
+  color: var(--font-color-black);
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.tour-show-info h3 {
+  font-size: 0.8rem;
+  color: var(--font-color-gray);
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.tour-show-info p {
+  font-size: 0.8rem;
+  color: var(--font-color-black);
+  font-weight: 400;
+  margin: 5px 0;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
+  padding: 8px 14px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.3);
 }
 
-.btn--primary {
-    color: #efefef;
-    background: #111;
+.btn-primary:hover {
+  background: var(--background-color-hover);
+  color: var(--font-color-black);
 }
 
-.btn--primary:hover {
-    color: #111;
-    background: #ccc;
+.contact {
+  margin: 40px 0;
+  overflow: hidden;
 }
 
-
-@media screen and (min-width: 768px) {
-    .tour {
-        width: 768px;
-        margin: 0 auto;
-    }
-
-    .tour .tour__info .tour__books {        
-        margin: 2rem 0;
-    }
+.contact .contact-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--font-color-black);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width: 768px) {
-    .tour {
-        width: 100%;      
-        padding: 5rem 1.5rem;  
-    }
-
-    .tour .tour__info .tour__books {
-        margin: 2rem 0;
-    }
-
-    .tour .tour__info .tour__places {
-        display: block;
-    }
-
-    .tour .tour__info .tour__places .tour__place {        
-        width: 100%;
-        margin: 2rem 0;
-    }
+.contact .contact-brief {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--font-color-gray);
+  font-weight: 300;
+  text-transform: capitalize;
+  font-style: italic;
+  margin: 15px 0;
 }
 
-.contact {    
-    padding: 5rem 0;
+.contact-info,
+.contact-form {
+  float: left;
+  width: 50%;
 }
 
-.contact h1.contact__title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    text-align: center;    
-}
-
-.contact h4.contact__note {
-    font-size: 1rem;    
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    margin: 1.5rem;
-}
-
-.contact .contact__data {
-    display: flex;
-}
-
-.contact .contact__data .contact__info, .contact .contact__data .contact__form {
-    flex: 1;
-}
-
-.contact .contact__data .contact__info .contact__info_row {
-    display: flex;
-    padding: 0.2rem;
-}
-
-.contact .contact__data .contact__info .contact__info_row .contact__info_logo {
-    min-width: 3rem;
-}
-
-.contact .contact__data .contact__info .contact__info_row .contact__info_title {
-    flex: 1;
-}
-
-.contact .contact__data .contact__form_row {
-    display: flex;
-    padding: 0.5rem;
-}
-
-.contact .contact__data .contact__form_row .contact__form_cell {
-    padding: 0.2rem;
-    flex: 1;
-}
-
-.contact .contact__data .contact__form_row .contact__form_cell input[type=text] {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
+@media only screen and (max-width: 767px) {
+  .contact-info,
+  .contact-form {
     width: 100%;
-    outline: none;
+  }
 }
 
-.pull--to-left{
-    float: left;
+.contact-info ul {
+  list-style: none;
 }
 
-.pull--to-right{
-    float: right;
+.contact-info ul li {
+  margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) {
-    .contact {
-        width: 768px;
-        margin: 0 auto;
-    }
+.contact-info ul li .contact-icon {
+  font-size: 0.8rem;
+  margin-right: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .contact {
-        width: 100%;      
-        padding: 5rem 1rem;  
-    }
-
-    .contact .contact__data {
-        display: block;
-    }
-
-    .contact .contact__data .contact__form {
-        margin: 2rem 0;
-    }
-
-    .contact .contact__data .contact__form .contact__form_row {
-        display: block;
-        padding: 0;
-    }
-   
+.contact-info ul li .contact-detail {
+  font-size: 0.9rem;
 }
 
-.contact__map {
-    background-image: url("https://www.w3schools.com/w3images/map.jpg");
-    background-repeat: no-repeat;    
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 40vw;    
+.contact-form .contact-form-row {
+  display: flex;
 }
 
-footer {
-    padding: 3rem 0;
-    text-align: center;
+.contact-form-row .contact-form-column {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-
-.communication a {
-    display: inline-block;
-    font-size: 2rem;
-    color: #666;
+.contact-form-name {
+  width: 95% !important;
 }
 
-.communication a:hover{
-    opacity: 0.6;
+.map {
+  width: 100%;
 }
 
-.copyright {
-    padding: 2rem;
-    color: #666;
+.footer {
+  text-align: center;
+  padding: 50px;
 }
 
-.copyright a{
-    display: inline-block;    
-    color: #666;
-    text-decoration: underline;
+.footer .social-networks a {
+  font-size: 1.2rem;
+  color: var(--font-color-black);
+  margin: 15px 0;
+  display: inline-block;
 }
 
+.footer .social-networks a:hover {
+  color: var(--font-color-gray);
+}
+
+.footer .copyright {
+  font-size: 0.8rem;
+  color: var(--font-color-gray);
+}
+
+.footer .copyright a {
+  text-decoration: underline;
+  color: var(--font-color-gray);
+}
+
+.btn-primary {
+  background: var(--background-color-black);
+}
+
+.bg-black {
+  background: var(--background-color-black);
+}
+
+.pull-to-left {
+  float: left;
+}
+
+.pull-to-right {
+  float: right;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-35 {
+  margin-top: 35px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-35 {
+  padding-top: 35px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.p-50 {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+}

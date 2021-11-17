@@ -14,39 +14,48 @@
   </head>
 
   <body>
-    <nav>
-      <ul class="nav__menu">
-        <li id="nav__menu_home">
-          <a href="javascript:void(0)"> Home </a>
-          <a id="nav__menu_bars" href="javascript:void(0)">
-            <i class="fa fa-bars"></i>
-          </a>
-        </li>
-        <li><a href="#">Band</a></li>
-        <li><a href="#">Tour</a></li>
-        <li><a href="#">Contact</a></li>
-        <li id="nav__menu_merch"><a href="#">Merch</a></li>
-        <li class="menu__dropdown">
-          <a href="#">More &nbsp;<i class="fa fa-caret-down"></i></a>
-          <div class="menu__submenu">
-            <a href="#">Merchandise</a>
-            <a href="#">Extras</a>
-            <a href="#">Media</a>
-          </div>
-        </li>
-      </ul>
-      <div class="nav__search">
-        <a href="#"><i class="fas fa-search"></i></a>
+    <div class="nav">
+      <div class="nav-menu">
+        <ul>
+          <li>
+            <span class="pull-to-left">
+              <a href="javascript:void(0)">Home</a>
+            </span>
+            <span id="nav-menu-bars" class="pull-to-right">
+              <i class="fa fa-bars"></i>
+            </span>
+          </li>
+          <li><a href="#">Band</a></li>
+          <li><a href="#">Tour</a></li>
+          <li><a href="#">Conact</a></li>
+          <li><a href="#">Merch</a></li>
+          <li class="dropdown">
+            <a href="#"> More &nbsp;&nbsp;<i class="fas fa-caret-down"></i> </a>
+            <div class="submenu">
+              <a href="#">Merchandise</a>
+              <a href="#">Extras</a>
+              <a href="#">Media</a>
+            </div>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="container">
-      <div class="slider"></div>
+      <div class="nav-search">
+        <a href="javascript:void(0)"><i class="fas fa-search"></i></a>
+      </div>
     </div>
-    <div class="container">
-      <div class="music">
-        <h1 class="music__singer">The Band</h1>
-        <h4 class="music__title">We love music</h4>
-        <p class="music__lyric">
+    <div class="container mt-35">
+      <div class="slider">
+        <h1 class="slider-place">Los Angeles</h1>
+        <h3 class="slider-brief">
+          We had the best time playing at Venice Beach!
+        </h3>
+      </div>
+    </div>
+    <div class="wrapper pt-50">
+      <div class="band">
+        <h1 class="band-title">The Band</h1>
+        <h3 class="band-brief">We love music</h3>
+        <p class="band-desc">
           We have created a fictional band website. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -59,150 +68,173 @@
           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.
         </p>
-        <div class="music__albums">
-          <div class="album">
-            <p class="album__title">Name</p>
+      </div>
+      <div class="band-albums">
+        <div class="band-album">
+          <div class="band-album-title">Name</div>
+          <div class="band-album-img">
             <img
               src="https://www.w3schools.com/w3images/bandmember.jpg"
-              alt="Image1"
+              alt="Name"
             />
           </div>
-          <div class="album">
-            <p class="album__title">Name</p>
+        </div>
+        <div class="band-album">
+          <div class="band-album-title">Name</div>
+          <div class="band-album-img">
             <img
               src="https://www.w3schools.com/w3images/bandmember.jpg"
-              alt="Image1"
+              alt="Name"
             />
           </div>
-          <div class="album">
-            <p class="album__title">Name</p>
+        </div>
+        <div class="band-album">
+          <div class="band-album-title">Name</div>
+          <div class="band-album-img">
             <img
               src="https://www.w3schools.com/w3images/bandmember.jpg"
-              alt="Image1"
+              alt="Name"
             />
           </div>
         </div>
       </div>
     </div>
-    <div class="container bgColor">
-      <div class="tour">
-        <div class="tour__info">
-          <h1 class="tour__title">Tour Dates</h1>
-          <h4 class="tour__description">Remember to book your tickets!</h4>
-          <div class="tour__books">
-            <div class="tour__book">
-              <span class="tour__book_month">September</span>
-              <span class="tour__book_soldout">Sold out</span>
-            </div>
-            <div class="tour__book">
-              <span class="tour__book_month">October</span>
-              <span class="tour__book_soldout">Sold out</span>
-            </div>
-            <div class="tour__book">
-              <span class="tour__book_month">November</span>
-              <span class="tour__book_sold">3</span>
-            </div>
+    <div class="container bg-black p-50">
+      <div class="wrapper">
+        <div class="tour">
+          <h1 class="tour-title">Tour Dates</h1>
+          <h3 class="tour-brief">Remember to book your tickets!</h3>
+          <div class="tour-schedule">
+            <ul class="tour-tickets">
+              <li class="tour-ticket">
+                <span class="tour-ticket-date">September</span>
+                <span class="tour-ticket-sold">Sold out</span>
+              </li>
+              <li class="tour-ticket">
+                <span class="tour-ticket-date">October</span>
+                <span class="tour-ticket-sold">Sold out</span>
+              </li>
+              <li class="tour-ticket">
+                <span class="tour-ticket-date">November</span>
+                <div class="tour-ticket-quantity pull-to-right">3</div>
+              </li>
+            </ul>
           </div>
-          <div class="tour__places">
-            <div class="tour__place">
+          <div class="tour-shows">
+            <div class="tour-show">
               <img
                 src="https://www.w3schools.com/w3images/newyork.jpg"
                 alt="NY"
+                class="tour-show-img"
               />
-              <div class="tour__detail">
-                <h4 class="tour__city">New York</h4>
-                <p class="tour__date">Fri 27 Nov 2016</p>
-                <p class="tour__description">
-                  Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              <div class="tour-show-info">
+                <h1>New York</h1>
+                <h3>Fri 27 Nov 2016</h3>
+                <p>
+                  Praesent tincidunt sed tellus ut rutrum sed vitae
+                  justo.Praesent tincidunt sed tellus ut rutrum sed vitae
+                  justo.Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <a href="#" class="btn btn--primary">Buy Tickets</a>
+                <a href="#" class="btn btn-primary">Buy Tickets</a>
               </div>
             </div>
-            <div class="tour__place">
+            <div class="tour-show">
               <img
-                src="https://www.w3schools.com/w3images/paris.jpg"
-                alt="Paris"
+                src="https://www.w3schools.com/w3images/newyork.jpg"
+                alt="NY"
+                class="tour-show-img"
               />
-              <div class="tour__detail">
-                <h4 class="tour__city">Paris</h4>
-                <p class="tour__date">Sat 28 Nov 2016</p>
-                <p class="tour__description">
-                  Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              <div class="tour-show-info">
+                <h1>New York</h1>
+                <h3>Fri 27 Nov 2016</h3>
+                <p>
+                  Praesent tincidunt sed tellus ut rutrum sed vitae
+                  justo.Praesent tincidunt sed tellus ut rutrum sed vitae
+                  justo.Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <a href="#" class="btn btn--primary">Buy Tickets</a>
+                <a href="#" class="btn btn-primary">Buy Tickets</a>
               </div>
             </div>
-            <div class="tour__place">
+            <div class="tour-show">
               <img
-                src="https://www.w3schools.com/w3images/sanfran.jpg"
-                alt="San Francisco"
+                src="https://www.w3schools.com/w3images/newyork.jpg"
+                alt="NY"
+                class="tour-show-img"
               />
-              <div class="tour__detail">
-                <h4 class="tour__city">San Francisco</h4>
-                <p class="tour__date">Sun 29 Nov 2016</p>
-                <p class="tour__description">
-                  Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              <div class="tour-show-info">
+                <h1>New York</h1>
+                <h3>Fri 27 Nov 2016</h3>
+                <p>
+                  Praesent tincidunt sed tellus ut rutrum sed vitae
+                  justo.Praesent tincidunt sed tellus ut rutrum sed vitae
+                  justo.Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <a href="#" class="btn btn--primary">Buy Tickets</a>
+                <a href="#" class="btn btn-primary">Buy Tickets</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="wrapper">
       <div class="contact">
-        <h1 class="contact__title">Contact</h1>
-        <h4 class="contact__note">Fan? Drop a note!</h4>
-        <div class="contact__data">
-          <div class="contact__info">
-            <div class="contact__info_row">
-              <div class="contact__info_logo">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact__info_title">Chicago, US</div>
+        <h1 class="contact-title">Contact</h1>
+        <h3 class="contact-brief">Fan? Drop a note!</h3>
+        <div class="contact-info">
+          <ul>
+            <li>
+              <span class="contact-icon"
+                ><i class="fas fa-map-marker-alt"></i
+              ></span>
+              <span class="contact-detail">Chicago, US</span>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+              <span class="contact-detail">Phone: +00 151515</span>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+              <span class="contact-detail">Email: mail@mail.com</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <div class="contact-form-row">
+            <div class="contact-form-column">
+              <input type="text" class="contact-form-name" placeholder="Name" />
             </div>
-            <div class="contact__info_row">
-              <div class="contact__info_logo">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact__info_title">Phone: +00 151515</div>
-            </div>
-            <div class="contact__info_row">
-              <div class="contact__info_logo">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact__info_title">Email: mail@mail.com</div>
+            <div class="contact-form-column">
+              <input
+                type="text"
+                class="contact-form-email"
+                placeholder="Email"
+              />
             </div>
           </div>
-          <div class="contact__form">
-            <form action="">
-              <div class="contact__form_row">
-                <div class="contact__form_cell">
-                  <input type="text" id="name" placeholder="Name" />
-                </div>
-                <div class="contact__form_cell">
-                  <input type="text" placeholder="Email" />
-                </div>
-              </div>
-              <div class="contact__form_row">
-                <div class="contact__form_cell">
-                  <input type="text" placeholder="Message" />
-                </div>
-              </div>
-              <div class="contact__form_row">
-                <div class="contact__form_cell">
-                  <a class="btn btn--primary">Send</a>
-                </div>
-              </div>
-            </form>
+          <div class="contact-form-row">
+            <div class="contact-form-column">
+              <input
+                type="text"
+                class="contact-form-message"
+                placeholder="Message"
+              />
+            </div>
+          </div>
+          <div class="contact-form-row">
+            <div class="contact-form-column">
+              <a href="#" class="btn btn-primary pull-to-right">Send</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="contact__map"></div>
-    <footer>
-      <div class="communication">
+    <img
+      src="https://www.w3schools.com/w3images/map.jpg"
+      alt="map"
+      class="map"
+    />
+    <div class="footer">
+      <div class="social-networks">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-snapchat"></i></a>
@@ -211,7 +243,7 @@
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <div class="copyright">Powered by <a href="#">w3.css</a></div>
-    </footer>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
