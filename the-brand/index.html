@@ -200,15 +200,17 @@
           </ul>
         </div>
         <div class="contact-form">
+          <form action="">
           <div class="contact-form-row">
             <div class="contact-form-column">
-              <input type="text" class="contact-form-name" placeholder="Name" />
+              <input type="text" required class="contact-form-name" placeholder="Name" />
             </div>
             <div class="contact-form-column">
               <input
                 type="text"
                 class="contact-form-email"
                 placeholder="Email"
+                required 
               />
             </div>
           </div>
@@ -218,14 +220,16 @@
                 type="text"
                 class="contact-form-message"
                 placeholder="Message"
+                required 
               />
             </div>
           </div>
           <div class="contact-form-row">
             <div class="contact-form-column">
-              <a href="#" class="btn btn-primary pull-to-right">Send</a>
+              <button type="submit" class="btn btn-primary pull-to-right">Send</button>
             </div>
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -256,14 +260,14 @@
         <div class="modal-body">
           <div class="modal-body-row">
             <div class="modal-body-cell">
-              <label><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</label>
-              <input type="text" class="modal-input" value="How many?"/>
+              <label for="modal-quantity"><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</label>
+              <input id="modal-quantity" type="text" class="modal-input" value="How many?"/>
             </div>
           </div>
           <div class="modal-body-row">
             <div class="modal-body-cell">
-              <label><i class="fas fa-user"></i> Send To</label>
-              <input type="text" class="modal-input" value="Enter email"/>
+              <label for="modal-email"><i class="fas fa-user"></i> Send To</label>
+              <input id="modal-email" type="text" class="modal-input" value="Enter email"/>
             </div>
           </div>
           <div class="modal-body-row">
@@ -273,7 +277,7 @@
           </div>
           <div class="modal-footer">
             <a href="javascript:void(0)" class="btn btn-danger pull-to-left">Close &nbsp;<i class="fas fa-times"></i></a>
-            <div class="help pull-to-right">Need <a href="#">help?</a></div>
+            <div class="help pull-to-right">Need <a href="javascript:void(0)">help?</a></div>
           </div>        
         </div>
       </div>            
