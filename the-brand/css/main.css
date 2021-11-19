@@ -81,10 +81,6 @@ button {
   font-size: 0.8rem;
 }
 
-#nav-menu-home a{
-  line-height: 16px;
-}
-
 @media only screen and (max-width: 767px) {
   .nav-menu ul li {
     float: none;
@@ -106,7 +102,7 @@ button {
 
   .pull-to-right i {
     color: var(--font-color-white);
-    padding: 10px;
+    padding: 10px 10px 9px 10px;
     display: block;
   }
 
@@ -164,7 +160,7 @@ button {
 
 .nav-search a {
   display: block;
-  padding: 8px 12px;
+  padding: 8px 12px 8px 12px;
 }
 
 .nav-search a:hover {
