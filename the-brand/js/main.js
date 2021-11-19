@@ -48,6 +48,19 @@ document.querySelector("#nav-menu-bars").addEventListener('click', function(){
     
 });
 
+const anchors = document.querySelectorAll(".nav-menu a");
+for(let i = 0; i < anchors.length; ++i) {
+    anchors[i].addEventListener('click', function(){
+        const navMenuChildren = document.querySelector(".nav-menu ul").children;
+        if (navMenuChildren[1].style.display === 'block') {
+            for(let i = 1; i < 5; ++i) {
+                navMenuChildren[i].style.display = '';
+            }
+        }
+    });
+}
+
+
 document.querySelector(".modal").addEventListener('click', function(){    
     document.querySelector(".modal").style.display = 'none';
 });

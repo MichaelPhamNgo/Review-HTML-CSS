@@ -81,6 +81,10 @@ button {
   font-size: 0.8rem;
 }
 
+#nav-menu-home a{
+  line-height: 16px;
+}
+
 @media only screen and (max-width: 767px) {
   .nav-menu ul li {
     float: none;
