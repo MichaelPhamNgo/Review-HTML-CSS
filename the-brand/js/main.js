@@ -47,3 +47,26 @@ document.querySelector("#nav-menu-bars").addEventListener('click', function(){
     }
     
 });
+
+document.querySelector(".modal").addEventListener('click', function(){    
+    document.querySelector(".modal").style.display = 'none';
+});
+
+document.querySelector(".modal-container").addEventListener('click', function(e){    
+    e.stopPropagation();
+});
+
+document.querySelector(".modal-footer > a").addEventListener('click', function(){    
+    document.querySelector(".modal").style.display = 'none';
+});
+
+document.querySelector(".modal-header a").addEventListener('click', function(){    
+    document.querySelector(".modal").style.display = 'none';
+});
+
+const buyTickets = document.querySelectorAll(".buy-ticket");
+for(let i = 0; i < buyTickets.length; ++i) {
+    buyTickets[i].addEventListener("click", function(){
+        document.querySelector(".modal").style.display = "flex";
+    });
+}

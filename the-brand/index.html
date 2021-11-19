@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="shortcut icon" href="https://www.pngall.com/wp-content/uploads/3/Music-Band-PNG.png" type="image/x-icon">
   </head>
 
   <body>
@@ -19,15 +20,15 @@
         <ul>
           <li>
             <span class="pull-to-left">
-              <a href="javascript:void(0)">Home</a>
+              <a href="#">Home</a>
             </span>
             <span id="nav-menu-bars" class="pull-to-right">
               <i class="fa fa-bars"></i>
             </span>
           </li>
-          <li><a href="#">Band</a></li>
-          <li><a href="#">Tour</a></li>
-          <li><a href="#">Conact</a></li>
+          <li><a href="#band">Band</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Conact</a></li>
           <li><a href="#">Merch</a></li>
           <li class="dropdown">
             <a href="#"> More &nbsp;&nbsp;<i class="fas fa-caret-down"></i> </a>
@@ -51,7 +52,7 @@
         </h3>
       </div>
     </div>
-    <div class="wrapper pt-50">
+    <div id="band" class="wrapper pt-50">
       <div class="band">
         <h1 class="band-title">The Band</h1>
         <h3 class="band-brief">We love music</h3>
@@ -99,7 +100,7 @@
         </div>
       </div>
     </div>
-    <div class="container bg-black p-50">
+    <div id="tour" class="container bg-black p-50">
       <div class="wrapper">
         <div class="tour">
           <h1 class="tour-title">Tour Dates</h1>
@@ -135,7 +136,7 @@
                   justo.Praesent tincidunt sed tellus ut rutrum sed vitae
                   justo.Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <a href="#" class="btn btn-primary">Buy Tickets</a>
+                <a href="javascript:void(0)" class="btn btn-primary buy-ticket">Buy Tickets</a>
               </div>
             </div>
             <div class="tour-show">
@@ -152,7 +153,7 @@
                   justo.Praesent tincidunt sed tellus ut rutrum sed vitae
                   justo.Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <a href="#" class="btn btn-primary">Buy Tickets</a>
+                <a href="javascript:void(0)" class="btn btn-primary buy-ticket">Buy Tickets</a>
               </div>
             </div>
             <div class="tour-show">
@@ -169,14 +170,14 @@
                   justo.Praesent tincidunt sed tellus ut rutrum sed vitae
                   justo.Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <a href="#" class="btn btn-primary">Buy Tickets</a>
+                <a href="javascript:void(0)" class="btn btn-primary buy-ticket">Buy Tickets</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="wrapper">
+    <div id="contact" class="wrapper">
       <div class="contact">
         <h1 class="contact-title">Contact</h1>
         <h3 class="contact-brief">Fan? Drop a note!</h3>
@@ -244,7 +245,39 @@
       </div>
       <div class="copyright">Powered by <a href="#">w3.css</a></div>
     </div>
-
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <a href="javascript:void(0)">&times;</a>
+          <h1 class="modal-header-title">
+            <i class="fas fa-suitcase"></i>  &nbsp;Tickets
+          </h1>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body-row">
+            <div class="modal-body-cell">
+              <label><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</label>
+              <input type="text" class="modal-input" value="How many?"/>
+            </div>
+          </div>
+          <div class="modal-body-row">
+            <div class="modal-body-cell">
+              <label><i class="fas fa-user"></i> Send To</label>
+              <input type="text" class="modal-input" value="Enter email"/>
+            </div>
+          </div>
+          <div class="modal-body-row">
+            <div class="modal-body-cell">
+              <button type="button" class="btn btn-info w-100">Pay <i class="fas fa-check"></i></button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="javascript:void(0)" class="btn btn-danger pull-to-left">Close &nbsp;<i class="fas fa-times"></i></a>
+            <div class="help pull-to-right">Need <a href="#">help?</a></div>
+          </div>        
+        </div>
+      </div>            
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
