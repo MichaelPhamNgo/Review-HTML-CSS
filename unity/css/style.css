@@ -148,8 +148,12 @@ body {
     flex-direction: column;
 }
 
-.card-user, .card-bottom {
+.card-user {
     margin-top: auto;
+    flex-shrink: 0;
+}
+
+.card-bottom {    
     flex-shrink: 0;
 }
 
