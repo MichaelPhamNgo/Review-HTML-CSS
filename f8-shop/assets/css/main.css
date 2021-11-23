@@ -12,13 +12,98 @@
 .header__navbar-list{
     list-style-type: none;
     padding-left: 0;
-    margin: 4px 0 0 0;
+    margin: 4px 0 0 0;  
+    display: flex;  
 }
 
 .header__navbar-item {
     margin: 0 8px;
     position: relative;
     min-height: 2.6rem;
+}
+
+.header__navbar-user {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header__navbar-user-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header__navbar-user-name {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    padding-left: 0;
+    top: 100%;
+    right: 0;
+    width: 160px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    list-style: none;
+    z-index: 1;
+    box-shadow: 0 1px 1px #ccc;   
+    display: none; 
+}
+
+.header__navbar-user-menu::after{
+    position: absolute;        
+    content: "";
+    display: block;    
+    top: -29px;
+    right: 4px;
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__navbar-user-menu::before{
+    position: absolute;        
+    content: "";
+    display: block;    
+    top: -10px;
+    right: 0;
+    height: 10px;
+    width: 75%;    
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+} 
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    padding: 8px 16px;
+    display: block;
+}
+
+.header__navbar-user-item a:hover {
+    background-color: #fafafa;
+}
+
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header__navbar-item-has-qr:hover .header__qr {
@@ -32,7 +117,7 @@
 .header__navbar-item, 
 .header__navbar-item-link{
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -69,6 +154,10 @@
 .header__navbar-icon-link {
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(1){
+    margin-left: 3px;
 }
 
 .header__navbar-icon {
@@ -127,12 +216,14 @@
     right: 0;
     width: 404px;
     background-color: var(--white-color);
-    border: 1px solid #D3D3D3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: default;
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation: headerNotifyGrowth ease-in 0.2s;
     will-change: opacity, transform;
     display: none;
+    z-index: 1;
+    border-radius: 2px;
 }
 
 .header__notify::before{
@@ -385,6 +476,11 @@
     width: 200px;
 }
 
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__logo-img {
     width: 150px;
 }
@@ -410,10 +506,11 @@
 }
 
 .header__cart-list::before {
+    cursor: pointer;
     content: '';
     position: absolute;
-    top: -24px;
-    right: 4px;
+    top: -29px;
+    right: 12px;
     border-width: 16px 20px;
     border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
@@ -433,7 +530,7 @@
 
 .header__cart-list {
     position: absolute;
-    top: calc(100% + 6px);
+    top: 96%;
     right: -12px;
     background-color: var(--white-color);
     width: 400px;
@@ -441,21 +538,43 @@
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
     display: none;
     animation: fadeIn ease-in 0.1s;
+    cursor: default;
 }
 
 .header__cart-list--no-cart {
     padding: 24px 0;
 }
 
+.header__cart-list--no-cart .header__cart-no-cart-img,
+.header__cart-list--no-cart .header__cart-list-no-cart-msg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .header__cart-no-cart-img {
+    display: none;
     width: 60%;
 }
 
 .header__cart-list-no-cart-msg {
-    display: block;
+    display: none;
     font-size: 1.4rem;
     margin-top: 14px;
     color: var(--text-color);
+}
+
+.header__cart-notice {
+    position: absolute;
+    top:3px;
+    right: -8px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    border: 2px solid #EE4D2D;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--primary-color);
+    background-color: var(--white-color);    
 }
 
 .header__search-input-wrap {
@@ -626,4 +745,92 @@
     font-size: 1.4rem;
     color:var(--text-color);
     display: block;
+}
+
+.header__cart-heading {
+    text-align: left;
+    margin: 8px 0 8px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.header__cart-list-item {
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__cart-img{
+    width: 42px;
+    height: 42px;
+    margin:12px;
+    border: 1px solid #E8E8E8;
+}
+
+.header__cart-item{
+    display: flex;
+    align-items: center;
+}
+
+.header__cart-item:hover{
+    background-color: #f8f8f8;
+}
+
+.header__cart-item-info{
+    padding: 8px 0;
+    width: 100%;
+    margin-right: 12px;
+}
+.header__cart-item-head{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.header__cart-item-name{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+}
+.header__cart-item-price{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+.header__cart-item-multiply{
+    font-size: 0.9rem;
+    margin: 0 4px;
+    color: #757575;
+}
+.header__cart-item-quantity{
+    font-size: 1.2rem;    
+    color: #757575;
+}
+.header__cart-item-body{
+    display: flex;   
+    justify-content: space-between;
+}
+.header__cart-item-description{
+    font-size: 1.3rem;  
+    color: #757575;
+    font-weight: 300;
+}
+
+.header__cart-view-cart {
+    float: right;
+    margin: 0 12px 12px 0;
+}
+
+.header__cart-view-cart:hover {
+    background-color: #F05F41;
+}
+
+.header__cart-item-remove{
+    font-size: 1.4rem;  
+    color: var(--text-color);    
+}
+.header__cart-item-remove:hover{    
+    color: var(--primary-color);   
+    cursor: pointer; 
 }
